@@ -8,6 +8,7 @@ import Funiturestyle from "./components/Funiturestyle";
 import Footer from "./components/Footer";
 
 
+
 export default function Home() {
   return (
   <div>
@@ -18,6 +19,8 @@ export default function Home() {
     <Rooms/>
     <Funiturestyle/>
     <Footer/>
+  
+
   </div>
   );
 }

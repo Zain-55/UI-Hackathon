@@ -6,7 +6,7 @@ export default function Funiturestyle() {
   return (
     <div className="flex justify-center items-center mt-10">
       {/* Container */}
-      <div className=" h-[721px]">
+      <div className=" h-[721px] md:h-[350px]">
         <Image
           src={Frame5}
           alt="Furniture Style"
