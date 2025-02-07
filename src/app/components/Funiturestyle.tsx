@@ -31,7 +31,7 @@ const images = [
     className: "col-span-1 row-span-1",
   },
   {
-    src: "/006.jpg",
+    src: "/006.png",
     alt: "Decorative side tables",
     className: "col-span-1 row-span-1",
   },
