@@ -1,76 +1,84 @@
 import React from 'react';
 import Image from 'next/image';
-import FooterImage from '../../../public/Footer.png';
+import Link from 'next/link';
+
 
 const page = () => {
   return (
-    <footer className="w-full h-[505px] my-[350px] px-4 md:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Top section with Help and Newsletter */}
-        
+    
+      <footer className="max-w-[1440px] bg-white pt-16  sm:pt-24 md:pt-32 lg:pt-40 px-4">
+      <div className="max-w-[1240px] mx-auto flex flex-wrap justify-between items-start gap-8 ">
+        {/* Address Section */}
+        <div className="w-full sm:w-[285px]">
+          <p className="font-[400] text-[16px] leading-[24px] text-[#9F9F9F] mt-4 sm:mt-20">
+            400 University Drive Suite 200 Coral <br /> Gables, <br /> FL 33134 USA
+          </p>
+        </div>
 
-        {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand and Address */}
-          <div className="space-y-4">
-            <h2 className="text-xl font-semibold">Funiro.</h2>
-            <address className="not-italic text-sm text-gray-600 leading-relaxed">
-              400 University Drive Suite 200 Coral Gables,<br />
-              FL 33134 USA
-            </address>
+        {/* Links Section */}
+        <div className="w-full sm:w-[352px] flex flex-col sm:flex-row justify-between gap-8">
+          <div className="space-y-4 sm:space-y-7 flex flex-col">
+            <p className="font-[500] text-[16px] leading-[24px] text-[#9F9F9F] cursor-pointer">
+              Link
+            </p>
+            <Link href={"/"} className="font-[500] text-[16px] leading-[24px] text-black cursor-pointer">
+              Home
+            </Link>
+            <Link href={"/Shop"} className="font-[500] text-[16px] leading-[24px] text-black cursor-pointer">
+              Shop
+            </Link>
+            <Link href="/About" className="font-[500] text-[16px] leading-[24px] text-black cursor-pointer">
+              About
+            </Link>
+            <Link href="/Contact" className="font-[500] text-[16px] leading-[24px] text-black cursor-pointer">
+              Contact
+            </Link>
           </div>
-
-          {/* Links - First Column */}
-          <div className="space-y-4">
-            
-            <nav>
-              
-              <ul className="space-y-3 w-[710px] h-[312px]">
-              <li><a href="#" className="text-sm hover:text-gray-900">Link</a></li>
-                <li><a href="#" className="text-sm hover:text-gray-900">Home</a></li>
-                <li><a href="#" className="text-sm hover:text-gray-900">Shop</a></li>
-                <li><a href="#" className="text-sm hover:text-gray-900">About</a></li>
-                <li><a href="#" className="text-sm hover:text-gray-900">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
-
-          {/* Links - Second Column */}
-          <div className="space-y-4">
-            <nav>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-sm hover:text-gray-900">Payment Options</a></li>
-                <li><a href="#" className="text-sm hover:text-gray-900">Returns</a></li>
-                <li><a href="#" className="text-sm hover:text-gray-900">Privacy Policies</a></li>
-              </ul>
-            </nav>
-          </div>
-
-          {/* Newsletter */}
-          <div className="space-y-4">
-            <form className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter Your Email Address"
-                className="flex-1 px-3 py-2  rounded text-sm focus:outline-none focus:ring-2 focus:ring-gray-200"
-                required
-              />
-              <button
-                type="submit"
-                className="px-4 py-2 text-black  text-sm rounded transition-colors"
-              >
-                SUBSCRIBE
-              </button>
-            </form>
+          <div className="space-y-4 sm:space-y-7">
+            <p className="font-[500] text-[16px] leading-[24px] text-[#9F9F9F] cursor-pointer">
+              Help
+            </p>
+            <p className="font-[500] text-[16px] leading-[24px] text-black cursor-pointer">
+              Payment Options
+            </p>
+            <p className="font-[500] text-[16px] leading-[24px] text-black cursor-pointer">
+              Returns
+            </p>
+            <p className="font-[500] text-[16px] leading-[24px] text-black cursor-pointer">
+              Privacy Policies
+            </p>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <p className="text-sm text-gray-600">2023 furino. All rights reserved</p>
+        {/* Newsletter Section */}
+        <div className="w-full sm:w-[286px]">
+          <p className="font-[500] text-[16px] leading-[24px] text-[#9F9F9F]">
+            Newsletter
+          </p>
+          <div className="mt-5 flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-center space-y-3 sm:space-y-0 sm:space-x-3">
+            <input
+              type="text"
+              placeholder="Enter Your Email Address"
+              className="w-full sm:w-[230px] font-[400] text-[14px] leading-[21px] border-b border-black focus:outline-none pb-2"
+            />
+            <button className="font-[500] text-[14px] leading-[21px] text-black border-b border-black px-4 pb-2">
+              SUBSCRIBE
+            </button>
+          </div>
+        </div>
+
+        {/* Copyright Section */}
+        <div className="w-full">
+          <div className="border-t border-[#D9D9D9] mt-6 pt-6">
+            <p className="font-[400] text-[16px] leading-[24px] text-black">
+              2023 furino. All rights reserved
+            </p>
+          </div>
         </div>
       </div>
     </footer>
-  )
-}
+    
+  );
+};
+
 export default page

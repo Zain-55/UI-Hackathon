@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Product from '../products/page';
 
 export default function OurProduct() {
   const categories = [
@@ -68,19 +69,19 @@ export default function OurProduct() {
       alt: "Potty",
       href: "/category/sofaset",
     },
-   
   ];
 
   return (
-    <section className="h-[1084px] border-[1px] mx-[102px]">
-      <h1 className="text-center text-[40px] font-bold mb-[32px]">
+    <section className="border-[1px] mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+      <Product/>
+      {/* <h1 className="text-center text-2xl sm:text-3xl font-bold mb-8">
         Our Products
       </h1>
-      <div className="grid grid-cols-4 gap-[32px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {categories.map((category, index) => (
           <div
             key={index}
-            className="  text-center hover:shadow-lg transition-shadow bg-[#F4F5F7] h-[446px] w-[285px] ml-[10px]"
+            className="text-center hover:shadow-lg transition-shadow bg-[#F4F5F7] p-4 rounded-lg"
           >
             <Link href={category.href}>
               <div>
@@ -89,24 +90,17 @@ export default function OurProduct() {
                   alt={category.alt}
                   width={300}
                   height={300}
-                  className="mx-auto h-[301px] overflow-hidden "
+                  className="mx-auto h-60 object-cover rounded-md"
                 />
-                <h2 className="text-[24px] font-semibold mt-[16px] mr-[146px] ml-[16px]">
-                  {category.title}
-                </h2>
-                <h1 className="mr-[111px] text-[16px] text-[#898989]">
-                  {category.dis}
-                </h1>
-                <h1 className="mr-[20px] ml-[16px] text-[16px]">
-                  {category.Price}
-                </h1>
+                <h2 className="text-lg font-semibold mt-4">{category.title}</h2>
+                <h1 className="text-sm text-[#898989]">{category.dis}</h1>
+                <h1 className="text-base font-medium mt-2">{category.Price}</h1>
               </div>
             </Link>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }
-
 
